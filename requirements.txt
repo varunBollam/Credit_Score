@@ -3,3 +3,7 @@ sklearn
 pandas
 numpy
 matplotlib
+<<<<<<< HEAD
+=======
+seaborn
+>>>>>>> 9d05554 (Updated requirments file)
