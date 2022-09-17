@@ -1,11 +1,14 @@
 import pickle
-from flask import Flask, request, app, jsonify, url_for, render_template
+from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+from sklearn.tree import BaseDecisionTree
 
-app=Flask(__name__)
 #Loading model in VS code
-DTModel=model.pickle.load(open('DTmodel.pkl','rb'))
+app=Flask(__name__)
+DTModel=pickle.load(open('DTmodel.pkl','rb'))
 
 @app.route('/')
 def home():
