@@ -3,8 +3,6 @@ from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
-from sklearn import tree
-from sklearn.tree import BaseDecisionTree
 
 #Loading model in VS code
 app=Flask(__name__)
