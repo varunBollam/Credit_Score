@@ -17,8 +17,11 @@ def home():
 def predit_api():
     data=request.json['data']
     print(data)
-    #print(np.array(list(data.values())[0]).reshape(1,-1))
-    output=RF.predit(data)
+    data=data.values([1]).astype(float)
+    #D1=np.array(list(data.values())).astype(float)
+    print(np.array(list(data.values())[0]).reshape(1,-1))
+    #newdata = [float(x) for x in data.values[0]] 
+    output=RF.predict(data)
     print(output[0])
     return jsonify(output[0])
 
