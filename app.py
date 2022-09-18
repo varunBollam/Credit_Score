@@ -13,8 +13,7 @@ RF=pickle.load(open('RF.pkl','rb'))
 def home():
     return render_template('home.html')
 
-@app.rout('/predit_api',methods=['POST'])
-
+@app.route('/predit_api',methods=['POST'])
 def predit_api():
     data=request.json['data']
     print(data)
@@ -25,6 +24,3 @@ def predit_api():
 
 if __name__ =="__main__":
     app.run(debug=True)
-
-
-
