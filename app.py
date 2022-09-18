@@ -7,6 +7,7 @@ import pandas as pd
 app=Flask(__name__)
 DTModel=pickle.load(open('DTmodel.pkl','rb'))
 
+
 @app.route('/')
 def home():
     return render_template('home.html')
