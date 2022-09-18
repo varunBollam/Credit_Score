@@ -2,11 +2,11 @@ import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 #Loading model in VS code
 app=Flask(__name__)
-DTnewModel=pickle.load(open('DTnewmodel.pkl','rb'))
+RF=pickle.load(open('RF.pkl','rb'))
 
 
 @app.route('/')
@@ -19,7 +19,7 @@ def predit_api():
     data=request.json['data']
     print(data)
     #print(np.array(list(data.values())[0]).reshape(1,-1))
-    output=DTnewModel.predit(data)
+    output=RF.predit(data)
     print(output[0])
     return jsonify(output[0])
 
