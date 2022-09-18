@@ -5,7 +5,7 @@ import pandas as pd
 
 #Loading model in VS code
 app=Flask(__name__)
-DTModel=pickle.load(open('DTmodel.pkl','rb'))
+DTnewModel=pickle.load(open('DTnewmodel.pkl','rb'))
 
 
 @app.route('/')
@@ -18,7 +18,7 @@ def predit_api():
     data=request.json['data']
     print(data)
     #print(np.array(list(data.values())[0]).reshape(1,-1))
-    output=DTModel.predit(data)
+    output=DTnewModel.predit(data)
     print(output[0])
     return jsonify(output[0])
 
