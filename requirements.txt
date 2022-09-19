@@ -1,5 +1,5 @@
 Flask
-sklearn=0.21.3
+sklearn==0.21.3
 pandas
 numpy
 matplotlib
