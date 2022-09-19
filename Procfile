@@ -1,2 +1,2 @@
-#web: gunicorn app:app
-web: gunicorn app:app --workers 4
+web: gunicorn app:app
+waitress-serve --listen=*:8000 app.wsgi:application
