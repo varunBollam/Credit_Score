@@ -1,3 +1,64 @@
-<h1>
-Hello World
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Credit score ("Good/Bad/Standard")</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Age" placeholder="Age" required="required" /><br>
+    	<input type="text" name="Occupation" placeholder="Occupation" required="required" /><br>
+        <input type="text" name="Annual_Income" placeholder="Annual_Income" required="required" /><br>
+        <input type="text" name="Monthly_Inhand_Salary" placeholder="Monthly_Inhand_Salary" required="required" /><br>
+        <input type="text" name="Num_Bank_Accounts" placeholder="Num_Bank_Accounts" required="required" /><br>
+        <input type="text" name="Num_Credit_Card" placeholder="Num_Credit_Card" required="required" /><br>
+        <input type="text" name="Interest_Rate" placeholder="Interest_Rate" required="required" /><br>
+        <input type="text" name="Num_of_Loan" placeholder="Num_of_Loan" required="required" /><br>
+        <input type="text" name="Delay_from_due_date" placeholder="Delay_from_due_date" required="required" /><br>
+        <input type="text" name="Num_of_Delayed_Payment" placeholder="Num_of_Delayed_Payment" required="required" /><br>
+        <input type="text" name="Changed_Credit_Limit" placeholder="Changed_Credit_Limit" required="required" /><br>
+        <input type="text" name="Num_Credit_Inquiries" placeholder="Num_Credit_Inquiries" required="required" /><br>
+        <input type="text" name="Credit_Mix" placeholder="Credit_Mix" required="required" /><br>
+        <input type="text" name="Outstanding_Debt" placeholder="Outstanding_Debt" required="required" /><br>
+        <input type="text" name="Credit_Utilization_Ratio" placeholder="Credit_Utilization_Ratio" required="required" /><br>
+        <input type="text" name="Credit_History_Age" placeholder="Credit_History_Age" required="required" /><br>
+        <input type="text" name="Payment_of_Min_Amount" placeholder="Payment_of_Min_Amount" required="required" /><br>
+        <input type="text" name="Total_EMI_per_month" placeholder="Total_EMI_per_month" required="required" /><br>
+        <input type="text" name="Amount_invested_monthly" placeholder="Amount_invested_monthly" required="required" /><br>
+        <input type="text" name="Payment_Behaviour" placeholder="Payment_Behaviour" required="required" /><br>
+        <input type="text" name="Monthly_Balance" placeholder="Monthly_Balance" required="required" /><br>
+        <input type="text" name="Auto Loan" placeholder="Auto Loan" required="required" /><br>
+        <input type="text" name="Credit-Builder Loan" placeholder="Credit-Builder Loan" required="required" /><br>
+        <input type="text" name="Debt Consolidation Loan" placeholder="Debt Consolidation Loan" required="required" /><br>
+        <input type="text" name="Home Equity Loan" placeholder="Home Equity Loan" required="required" /><br>
+        <input type="text" name="Mortgage Loan" placeholder="Mortgage Loan" required="required" /><br>
+        <input type="text" name="Not Specified" placeholder="Not Specified" required="required" /><br>
+        <input type="text" name="Payday Loan" placeholder="Payday Loan" required="required" /><br>
+        <input type="text" name="Personal Loan" placeholder="Personal Loan" required="required" /><br>
+        <input type="text" name="Student Loan" placeholder="Student Loan" required="required" /><br>
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
